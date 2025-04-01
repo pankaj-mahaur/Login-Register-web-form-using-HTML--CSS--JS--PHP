@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #2d1256;
+  /* background-color: rgba(40, 0, 85, 0.6); Slightly darker, more minimal */
   color: #ffffff;
   background: linear-gradient(
     to right,
@@ -19,17 +19,21 @@ body {
     #6429ba,
     #702dd5,
     #7c36e6,
-    #8c40fd
+    #954fff
   );
 }
 .container {
-  background: #ffa836;
+  background: rgba(255, 255, 255, 0.1); /* Light transparent white */
+  backdrop-filter: blur(15px); /* Soft blur effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
   width: 450px;
   padding: 1.5rem;
   margin: 50px auto;
-  border-radius: 10px 30px 30px;
-  box-shadow: 20px 10px 80px rgba(0, 0, 1, 0.551);
+  border-radius: 15px; /* More rounded for a soft look */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
+
 .form-tittle {
   font-size: 1.7rem;
   font-weight: bold;
@@ -61,7 +65,7 @@ input {
 input:focus {
   background-color: transparent;
   outline: transparent;
-  border-bottom: 2px solid #8c40fd;
+  border-bottom: 2px solid #e0d7ff;
 }
 input::placeholder {
   color: transparent;
@@ -78,7 +82,7 @@ label {
 input:focus ~ label,
 input:not(:placeholder-shown) ~ label {
   top: -3em;
-  color: #8c40fd;
+  color: #e0d7ff;
   font-size: 15px;
 }
 
@@ -89,10 +93,12 @@ input:not(:placeholder-shown) ~ label {
 }
 .recover a {
   text-decoration: none;
-  color: #40197a;
+  font-weight: bold;
+  color: #40197B;
 }
 .recover a:hover {
-  color: #8c40fd;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0px 0px 3px rgb(255, 255, 255);
   text-decoration: underline;
 }
 .btn {
@@ -122,7 +128,7 @@ input:not(:placeholder-shown) ~ label {
   text-align: center;
 }
 .icons i {
-  color: #8c40fd;
+  color: #e0d7ff;
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
   font-size: 1.5rem;
@@ -147,13 +153,15 @@ input:not(:placeholder-shown) ~ label {
   font-size: 0.9rem;
 }
 button {
-  color: #8c40fd;
+  color: #230b48;
   border: none;
   background-color: transparent;
   font-size: 0.9rem;
   font-weight: bold;
+  transition: 0.3s ease-in-out;
 }
 button:hover {
   text-decoration: underline;
-  color: #40197a;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.9);
 }
